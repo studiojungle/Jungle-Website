@@ -1,0 +1,12 @@
+# Ignore dependency directories
+node_modules
+
+# Ignore dev compiled files
+serve/
+
+# Ignore json package lock file
+package-lock.json
+
+# Full proofing for any unwanted files
+.vscode
+.DS_Store
