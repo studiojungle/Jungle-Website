@@ -35,13 +35,18 @@
 
                    // Initialize Swiper if available
                  var swiper = new Swiper(".swiper", {
-      spaceBetween: 30,
-          slidesPerView: "auto",
-              centeredSlides: true,
+                    spaceBetween: 20,
+ centeredSlides: false,
       autoplay: {
         delay: 3000
       },
-                    spaceBetween: 20,
+                    breakpoints:{
+                      767: {
+      spaceBetween: 30,
+                                slidesPerView: "auto",
+              centeredSlides: true,
+                      }
+                    }
 
     });
         // Mobile menu toggle
