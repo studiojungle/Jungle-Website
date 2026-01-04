@@ -1,0 +1,119 @@
+    {% set title = "Let's Talk" %}
+
+{% extends 'layouts/base.twig' %}
+
+{% block headerscripts %}
+{% endblock %}
+
+{% block content %}
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-wrapper">
+            <h2>Let's <span class="highlight">Talk</span></h2>
+            <p class="contact-intro">Our excellent team helps you reach maximum profits from the digital product that we craft from our passion.</p>
+
+            <form id="contactForm">
+                <div class="form-group">
+                    <label>Full Name <span class="required">*</span></label>
+                    <input type="text" name="name" placeholder="e.g. John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address <span class="required">*</span></label>
+                    <input type="email" name="email" placeholder="e.g. john@example.com" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" name="phone" placeholder="e.g. +1 347 182 1899">
+                    </div>
+                    <div class="form-group">
+                        <label>Company</label>
+                        <input type="text" name="company" placeholder="e.g. Jungle Tech">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>What kind of service do you seek? <span class="required">*</span></label>
+                        <select name="service" required>
+                            <option value="">Select an option</option>
+                            <option value="Branding">Branding</option>
+                            <option value="App Development">App Development</option>
+                            <option value="Market Entry Insights">Market Entry Insights</option>
+                            <option value="Website Development">Website Development</option>
+                            <option value="Product Design (UI/UX)">Product Design (UI/UX)</option>
+                            <option value="User Experience Audit">User Experience Audit</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>What's your role? <span class="required">*</span></label>
+                        <select name="role" required>
+                            <option value="">Select a role</option>
+                            <option value="Founder/CEO">Founder/CEO</option>
+                            <option value="Product Manager">Product Manager</option>
+                            <option value="Marketing Manager">Marketing Manager</option>
+                            <option value="Developer">Developer</option>
+                            <option value="Designer">Designer</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>What sort of insight do you need? <span class="required">*</span></label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="insights" value="Branding" id="insight1">
+                            <label for="insight1">Branding</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="insights" value="Website Development" id="insight2">
+                            <label for="insight2">Website Development</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="insights" value="App Development" id="insight3">
+                            <label for="insight3">App Development</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="insights" value="Product Design (UI/UX)" id="insight4">
+                            <label for="insight4">Product Design (UI/UX)</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="insights" value="Market Entry Insights" id="insight5">
+                            <label for="insight5">Market Entry Insights</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="insights" value="User Experience Audit" id="insight6">
+                            <label for="insight6">User Experience Audit</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Your Budget Range <span class="required">*</span></label>
+                    <input type="text" name="budgetRange" placeholder="e.g. USD 20,000 - USD 40,000" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Any other things that you want us to know? <span class="required">*</span></label>
+                    <textarea name="additionalInfo" placeholder="Describe any other things that are not provided in the form above." required></textarea>
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="submit-button">Get your Proposal</button>
+                </div>
+
+                <div id="formMessage"></div>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+{% endblock %}

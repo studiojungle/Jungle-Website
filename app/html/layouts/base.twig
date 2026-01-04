@@ -8,12 +8,25 @@
     <link rel="stylesheet" href="main.css">
     {% block headerscripts %}
     {% endblock %}
-</head>
-<body>
 {% block header %}
 {% include 'partials/header.twig' %}
 {% endblock  %}
-
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="/" class="logo"><img src="/images/jg%20logo%201.png" alt="Jungle logo"></a>
+        <ul class="nav-menu">
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#works">Works</a></li>
+            <li><a href="/contact" class="cta-button">Let's talk</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
 {% block content %}
 
 {% endblock %}
