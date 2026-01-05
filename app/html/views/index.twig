@@ -1,3 +1,33 @@
+{% set portfolioItems = [
+    {
+        title: 'Makiya',
+        image: '/images/ef7c9e2053e542b61c35a7a5cc514a9a739fc698.png'
+    },
+    {
+        title: 'University Assistance Education',
+        image: '/images/0327454bcb341ef85254fce232c625050262588d.png'
+    },
+    {
+        title: 'The Nepali Kitchen',
+        image: '/images/c20d21e6377a298f8b8773b35559d8ef52b2123f.png'
+    },
+    {
+        title: 'Empower Kind',
+        image: '/images/688370cddf0fc7f3d87d2cb9f794c0a68c4a8291.png'
+    },
+    {
+        title: 'Breathless',
+        image: '/images/4d46127c20a8f8b26c65f8714b7eeb21d3b2ed85.png'
+    },
+    {
+        title: 'Breathless',
+        image: '/images/Image(1).png'
+    }
+] %}
+
+
+
+
 {% set title = "Jungle" %}
 
 {% extends 'layouts/base.twig' %}
@@ -15,6 +45,7 @@
         <div class="hero-image">
             <img src="/images/a3c7ee125b7b8563706a12861dd57afdc5be0470.jpg" alt="Team collaboration">
         </div>
+         <div class="logo-element"><img src="/images/jgelement.png" alt="logo-element"></div>
     </section>
 
     <!-- About Section -->
@@ -49,64 +80,25 @@
             <p>A closer look at what we've built.</p>
         </div>
 
-        <div class="portfolio-grid">
-            <div class="swiper portfolio-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                        <div class="portfolio-item">
-                            <div class="portfolio-image">
-                                <img src="/images/ef7c9e2053e542b61c35a7a5cc514a9a739fc698.png" alt="Portfolio image 7">
-                            </div>
-                            <h3 class="portfolio-title">Makiya</h3>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="portfolio-item">
-                            <div class="portfolio-image">
-                                <img src="/images/0327454bcb341ef85254fce232c625050262588d.png" alt="Portfolio image 1">
-                            </div>
-                            <h3 class="portfolio-title">University Assistance Education</h3>
-                        </div>
-                    </div>
+       <div class="portfolio-grid">
+    <div class="swiper portfolio-swiper">
+        <div class="swiper-wrapper">
 
-                    <div class="swiper-slide">
-                        <div class="portfolio-item">
-                            <div class="portfolio-image">
-                                <img src="/images/c20d21e6377a298f8b8773b35559d8ef52b2123f.png" alt="Portfolio image 6">
-                            </div>
-                            <h3 class="portfolio-title">The Nepali Kitchen</h3>
+            {% for item in portfolioItems %}
+                <div class="swiper-slide">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="{{ item.image }}" alt="{{ item.title }}">
                         </div>
+                        <h3 class="portfolio-title">{{ item.title }}</h3>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="portfolio-item">
-                            <div class="portfolio-image">
-                                <img src="/images/688370cddf0fc7f3d87d2cb9f794c0a68c4a8291.png" alt="Portfolio image 3">
-                            </div>
-                            <h3 class="portfolio-title">Empower Kind</h3>
-                        </div>
-                    </div>
-                                          <div class="swiper-slide">
-                        <div class="portfolio-item">
-                            <div class="portfolio-image">
-                                <img style="object-position: left" src="/images/4d46127c20a8f8b26c65f8714b7eeb21d3b2ed85.png" alt="Portfolio image 2">
-                            </div>
-                            <h3 class="portfolio-title">Breathless</h3>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="portfolio-item">
-                            <div class="portfolio-image">
-                                <img src="/images/Image(1).png" alt="Portfolio image 4">
-                            </div>
-                            <h3 class="portfolio-title">Breathless</h3>
-                        </div>
-                    </div>
-
-
                 </div>
+            {% endfor %}
 
-            </div>
         </div>
+    </div>
+</div>
+
     </section>
 
     <!-- CTA Section -->
